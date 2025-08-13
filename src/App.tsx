@@ -3,6 +3,8 @@ import Layout from './components/Layout';
 import PatientManager from './components/PatientManager';
 import MedicineManager from './components/MedicineManager';
 import PosologyManager from './components/PosologyManager';
+import PrescriptionManager from './components/PrescriptionManager';
+import SettingsManager from './components/SettingsManager';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('patients');
@@ -16,9 +18,9 @@ function App() {
       case 'posologies':
         return <PosologyManager />;
       case 'prescriptions':
-        return <div>Sistema de Prescrições (Em desenvolvimento)</div>;
+        return <PrescriptionManager />;
       case 'settings':
-        return <div>Configurações (Em desenvolvimento)</div>;
+        return <SettingsManager />;
       default:
         return <PatientManager />;
     }

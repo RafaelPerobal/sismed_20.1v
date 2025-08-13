@@ -1,6 +1,6 @@
 [package]
 name = "sismed-perobal"
-version = "1.0.0"
+version = "20.1.0"
 description = "Sistema de Prescrição Médica Perobal"
 authors = ["SisMed Team"]
 license = "MIT"
@@ -11,10 +11,11 @@ edition = "2021"
 tauri-build = { version = "1.5", features = [] }
 
 [dependencies]
-tauri = { version = "1.5", features = ["api-all", "dialog-save", "dialog-open", "fs-copy-file", "fs-exists", "fs-read-file", "fs-write-file", "shell-open"] }
+tauri = { version = "1.5", features = ["api-all", "dialog-save", "dialog-open", "fs-copy-file", "fs-exists", "fs-read-file", "fs-write-file", "shell-open", "path-all"] }
+rusqlite = { version = "0.29", features = ["bundled"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-tauri-plugin-sql = { version = "1.4", features = ["sqlite"] }
+chrono = { version = "0.4", features = ["serde"] }
 
 [features]
 default = ["custom-protocol"]
